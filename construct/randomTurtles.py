@@ -1,8 +1,8 @@
 from turtle import *
 from random import randint
 from random import random
-from typing import Any, Union
 import datetime
+from construct.createTurtles import gencolor
 
 def eventrand():
     Bruijn = [0,0,0,0,1,0,0,1,0,1,1,0,0,1,1,1,1,1,0,0,0,1,1,0,1,1,1,0,1,0,1,0,0,0,0]
