@@ -12,19 +12,22 @@ def gencolor():
 def create(n):
 	#Set the default coordinates
 	if (n == 13):
-		x, y, spin = -130, 0, 0 
+		x, y, spin = -130, 0, 0
 	elif (n == 17):
-		x, y, spin = -170, 0, 0 
+		x, y, spin = -170, 0, 0
 	elif (n == 21):
-		x, y, spin = -210, 0, 0 
+		x, y, spin = -210, 0, 0
 
 	tur = []
+	color = []
 
 	for n in (gencolor(),gencolor(),gencolor(),gencolor()):	  #Create the turtles
 	#Customize the turtles
 		t = Turtle()
+		# bluebear = "images/characters/set1/Bluebearforward.gif"
+		register_shape("banhmy", ((3.4641, 2), (0, 4), (-3.4641, 2), (-3.4641, -2), (0, -4), (3.4641, -2)))
 		t.color(n)
-		t.shape('turtle')
+		t.shape("banhmy")
 
 	#Move turtles to the start point
 		t.penup()
@@ -40,5 +43,6 @@ def create(n):
 			t.left(360)
 
 		tur.append(t)
+		color.append(n)
 
-	return tur	#Return the list of turtles
+	return tur,color	#Return the list of turtles
