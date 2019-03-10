@@ -70,39 +70,56 @@ def create(timeindex, tur, col):
 	###Clear 2,3,4 turtle:
 	time.sleep(3)
 	cv.delete(textID)
-	Bgphoto = PhotoImage(file = "images/race/BGTurtleBlack.gif", master = cv)
+	Bgphoto = PhotoImage(file = "images/reward_medals/Ranking.gif", master = cv)
 	cv.create_image(-360, -300, image = Bgphoto, anchor = N+W)
 	cv.image = Bgphoto
-	for i in range(1,4):
-		tur[timeindex[i*2]].clear()
-		tur[timeindex[i*2]].ht()
+	tur[timeindex[6]].clear()
+	tur[timeindex[6]].ht()
 	clear()
 	tur[timeindex[0]].right(90)
-	tur[timeindex[0]].forward(165)
+	tur[timeindex[0]].forward(150)
 	tur[timeindex[0]].left(90)
-	tur[timeindex[0]].backward(80)
-	flag = 4
+	tur[timeindex[0]].backward(50)
+	tur[timeindex[2]].right(90)
+	tur[timeindex[2]].forward(160)
+	tur[timeindex[2]].left(90)
+	tur[timeindex[2]].backward(135)
+	tur[timeindex[4]].left(90)
+	tur[timeindex[4]].forward(215)
+	tur[timeindex[4]].right(90)
+	tur[timeindex[4]].backward(165)
+	flag = 3
 	temp = Turtle ()
 	temp.penup ()
 	temp.ht ()
 	while(flag):
 		for i in range(1,13):
 			cv = getcanvas()
-			dirImage = "images/reward_medals/F"
-			dirImage = dirImage + str(i)
-			dirImage = dirImage + ".png"
-			Medal1 = PhotoImage(file = dirImage, master = cv)
-			cv.create_image(-215, -150, image = Medal1, anchor = N+W)
+			dir1Image = "images/reward_medals/F"
+			dir1Image = dir1Image + str(i)
+			dir1Image = dir1Image + ".png"
+			dir2Image = "images/reward_medals/S"
+			dir2Image = dir2Image + str(i)
+			dir2Image = dir2Image + ".png"
+			dir3Image = "images/reward_medals/T"
+			dir3Image = dir3Image + str(i)
+			dir3Image = dir3Image + ".png"
+			Medal1 = PhotoImage(file = dir3Image, master = cv)
+			cv.create_image(-250, -50, image = Medal1, anchor = N+W)
 			cv.image = Medal1
-			Medal2 = PhotoImage(file = dirImage, master = cv)
-			cv.create_image(-55, -190, image = Medal2, anchor = N+W)
+			Medal2 = PhotoImage(file = dir1Image, master = cv)
+			cv.create_image(-70, -190, image = Medal2, anchor = N+W)
 			cv.image = Medal2
-			Medal3 = PhotoImage(file = dirImage, master = cv)
-			cv.create_image(105, -150, image = Medal3, anchor = N+W)
+			Medal3 = PhotoImage(file = dir2Image, master = cv)
+			cv.create_image(85, -110, image = Medal3, anchor = N+W)
 			cv.image = Medal3
-			tur[timeindex[0]].forward(20)
-			tur[timeindex[0]].backward(20)
+			tur[timeindex[0]].forward(50)
+			tur[timeindex[0]].backward(50)
 			tur[timeindex[0]].color(gencolor())
+			tur[timeindex[2]].forward(50)
+			tur[timeindex[2]].backward(50)
+			tur[timeindex[4]].forward(50)
+			tur[timeindex[4]].backward(50)
 			temp.speed(1)
 			temp.forward(12)
 		flag = flag - 1
