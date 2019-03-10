@@ -25,9 +25,10 @@ def create(n):
 	#Customize the turtles
 		t = Turtle()
 		# bluebear = "images/characters/set1/Bluebearforward.gif"
-		register_shape("banhmy", ((3.4641, 2), (0, 4), (-3.4641, 2), (-3.4641, -2), (0, -4), (3.4641, -2)))
+		register_shape("banhmy", ((-4,3),(-4,1),(-2,2),(0,4),(2,2),(4,3),(4,1),(2,2),(0,-2),(-1,-3),(1,-3),(-2,2)))
 		t.color(n)
 		t.shape("banhmy")
+		t.shapesize(3, 3, 1)
 
 	#Move turtles to the start point
 		t.penup()

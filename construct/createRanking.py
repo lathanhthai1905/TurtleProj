@@ -81,7 +81,7 @@ def create(timeindex, tur, col):
 	tur[timeindex[0]].forward(165)
 	tur[timeindex[0]].left(90)
 	tur[timeindex[0]].backward(80)
-	flag = 10
+	flag = 4
 	temp = Turtle ()
 	temp.penup ()
 	temp.ht ()
