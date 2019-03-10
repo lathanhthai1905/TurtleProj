@@ -1,6 +1,7 @@
 from tkinter import *
 from turtle import *
-from construct.constructWorld import *
+from construct import createRoad, createTurtles, randomTurtles,createRanking
+import time
 
 #--------------------------------------------------------------------#
 #Set main window
@@ -21,21 +22,31 @@ def makeshort(event, frame):
 	select.withdraw()
 	frame.destroy()
 	clearscreen()
-	createtheWorld(12)
+	createRoad.create(12 + 1,gameCanvas)
+	t = createTurtles.create(12 + 1,gameCanvas)
+	time.sleep(1)
+	time_r = randomTurtles.makeItMove(t, 12 + 1)
+	createRanking.create(time_r, t)
 	root.deiconify()
 def makelong(event, frame):
 	root.withdraw()
 	select.withdraw()
 	frame.destroy()
 	clearscreen()
-	createtheWorld(20)
+	createRoad.create(20 + 1)
+	t = createTurtles.create(20 + 1)
+	time.sleep(1)
+	time_r = randomTurtles.makeItMove(t, 20 + 1)
 	root.deiconify()
 def makemedium(event, frame):
 	root.withdraw()
 	select.withdraw()
 	frame.destroy()
 	clearscreen()
-	createtheWorld(16)
+	createRoad.create(16 + 1)
+	t = createTurtles.create(16 + 1)
+	time.sleep(1)
+	time_r = randomTurtles.makeItMove(t, 16 + 1)
 	root.deiconify()
 #Choose length
 def selectLength(event):
